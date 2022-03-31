@@ -1,0 +1,7 @@
+<component name="CopyrightManager">
+  <copyright>
+    <option name="allowReplaceKeyword" value="TODO - Enter file description" />
+    <option name="myName" value="BSD 3-Clause License Copyright" />
+    <option name="notice" value="&amp;#36;file.fileName&#10;&#10;TODO - Enter file description&#10;&#10;Created:  &amp;#36;today.format(&quot;yyyy/MM/dd&quot;)&#10;Author:   &amp;#36;username&#10;&#10;Copyright © &amp;#36;today.year Bitstream Innovations, LLC." />
+  </copyright>
+</component>

@@ -1,0 +1,115 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:security/recommended",
+    "eslint-config-airbnb-base"
+  ],
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "import",
+    "security",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "arrow-body-style": [ "warn", "as-needed" ],
+    "arrow-parens": [ "error", "as-needed", { "requireForBlockBody": true } ],
+    "brace-style": [ "warn", "stroustrup", { "allowSingleLine": true } ],
+    "class-methods-use-this": "off",
+    "comma-dangle": "off",  // not sure why airbnb turned this on. gross!
+    "dot-notation": "off",
+    "func-call-spacing": "off",
+    "function-paren-newline": [ "error", "consistent" ],
+    "generator-star-spacing": [ "error", { "before": true, "after": false } ],
+    "id-length": [ "error", { "exceptions": [ "a", "b", "c", "d", "e", "f", "i", "j", "k", "x", "y", "z","_", "$" ] } ],
+    "import/default": "off",
+    "import/extensions": "off",
+    "import/named": "off",
+    "import/namespace": "off",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "off",
+    "import/no-named-as-default": "error",
+    "import/no-relative-packages": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "indent": [ "error", 2, {
+      "SwitchCase": 1,
+      "CallExpression": { "arguments": "first" },
+      "FunctionDeclaration": { "parameters": "first" },
+      "FunctionExpression": { "parameters": "first" }
+    } ],
+    "linebreak-style": "off",
+    "max-len": [ "warn", 120, 2, {
+      "ignoreUrls": true,
+      "ignoreComments": false,
+      "ignoreRegExpLiterals": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true
+    } ],
+    "new-cap": [ "error", { "capIsNewExceptions": [
+      "Body",
+      "Delete",
+      "Example",
+      "Get",
+      "Header",
+      "List",
+      "Map",
+      "Patch",
+      "Post",
+      "Query",
+      "Request",
+      "Res",
+      "Response",
+      "Route",
+      "Security",
+      "Set",
+      "SuccessResponse",
+      "Tags"
+    ] } ],
+    "no-alert": "off",
+    "no-console": "off",
+    "no-multi-spaces": [ "error", { "ignoreEOLComments": true } ],
+    "no-nested-ternary": "off",
+    "no-param-reassign": [ "error", { "props":  false } ],
+    "no-plusplus": "off",
+    "no-shadow": "off",
+    "no-spaced-func": "off",
+    "no-trailing-spaces": "off",
+    "no-unused-vars": [ "off" ],
+    "no-unexpected-multiline": "off",
+    "no-use-before-define": "off",
+    "object-curly-newline": [ "error", { "consistent": true } ],
+    "operator-linebreak": [ "warn", "after", {
+      "overrides": {
+        "?": "before",
+        ":": "before"
+      }
+    } ],
+    "prefer-destructuring": [ "warn", {
+      "VariableDeclarator": {
+        "array": true,
+        "object": true
+      },
+      "AssignmentExpression": {
+        "array": true,
+        "object": false
+      }
+    } ],
+    "quotes": [ "warn", "single", { "avoidEscape":  true } ],
+    "semi": [ "error", "always" ],
+    "space-before-function-paren": [ "warn", "always" ],
+    "spaced-comment": [ "warn", "always", { "exceptions": ["=", "*"], "markers":  [ "/" ] } ],
+    "template-curly-spacing": ["warn", "never"],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-shadow": [ "error" ],
+    "@typescript-eslint/no-unused-vars": [ "warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": true } ],
+    "@typescript-eslint/no-use-before-define": [ "error" ],
+    "@typescript-eslint/no-var-requires": [ "off" ]
+  }
+}

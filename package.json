@@ -1,0 +1,51 @@
+{
+  "name": "typedoc-plugin-custom-tags-v2",
+  "version": "1.0.0",
+  "description": "TypeDoc plugin to handle custom tags in JSDoc comments",
+  "author": "Bitstream Innovations, LLC",
+  "keywords": [
+    "typedocplugin",
+    "typedoc",
+    "tags"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm-run-all clean compile",
+    "clean": "del-cli \"dist/**\" \"!dist/.gitignore\"",
+    "compile": "tsc --build --force",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist/**/*",
+    "!dist/.gitignore"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitstreaminnovations/typedoc-plugin-custom-tags-v2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bitstreaminnovations/typedoc-plugin-custom-tags-v2/issues"
+  },
+  "homepage": "https://github.com/bitstreaminnovations/typedoc-plugin-custom-tags-v2#readme",
+  "peerDependencies": {
+    "typedoc": ">=0.22.13 <1.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^16",
+    "@typescript-eslint/eslint-plugin": "5.15.0",
+    "@typescript-eslint/parser": "5.15.0",
+    "del-cli": "4.0.1",
+    "eslint": "8.11.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jest": "26.1.1",
+    "eslint-plugin-security": "1.4.0",
+    "npm-run-all": "4.1.5",
+    "typedoc": "0.22.13",
+    "typescript": "4.6.2"
+  }
+}
