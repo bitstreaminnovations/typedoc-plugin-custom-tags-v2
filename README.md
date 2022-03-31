@@ -34,14 +34,15 @@ Essentially, add a new section `customTagsConfig` to the TypeDoc configuration, 
   ]
 }
 ```
-Each entry in the `customTagsConfig` array specifies a tag name to look for in
-the JSDoc comments. When found, the tag's value will be replaced according to 
-the Markdown-formatted `replacement` string associated with that tag.
+Each entry in the `customTagsConfig` array specifies a tag name (`tagName`) to 
+look for in the JSDoc comments. When found, the tag's value will be replaced 
+according to the Markdown-formatted `replacement` string associated with that 
+tag.
 
-To allow for formatting variations based on the tag value, the `regex` and 
+To allow for formatting variations based on the tag's value, the `regex` and 
 `regexFlags` properties can optionally be set. In this way, the configuration 
-will only match if *both* the tag name matches and the tag's value matches the 
-`regex` test.
+will only match if *both* the tag name matches `tagName` and the tag's value 
+matches the `regex` test.
 
 So, using the above configuration, the following JSDoc comment:
 ```js

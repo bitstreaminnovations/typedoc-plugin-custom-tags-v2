@@ -34,7 +34,7 @@ declare module 'typedoc' {
  * {
  *   tagName: 'helloTag',
  *   regex: '^<p>(.*)</p>$'
- *   helloTag: '```html\n<div>$1</div>\n```'
+ *   replacement: '```html\n<div>$1</div>\n```'
  * }
  * Example input tag value: <p>Hello World!</p>
  * Resulting formatted text: '```html\n<div>Hello World!</div>\n```'
