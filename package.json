@@ -1,6 +1,6 @@
 {
   "name": "typedoc-plugin-custom-tags-v2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeDoc plugin to handle custom tags in JSDoc comments",
   "author": "Bitstream Innovations, LLC",
   "keywords": [
@@ -32,8 +32,7 @@
   "peerDependencies": {
     "typedoc": ">=0.22.13 <1.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^16",
     "@typescript-eslint/eslint-plugin": "5.15.0",
