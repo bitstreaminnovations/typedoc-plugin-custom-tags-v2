@@ -21,27 +21,27 @@ Essentially, add a new section `customTagsConfig` to the TypeDoc configuration, 
       "tagName": "example",
       "regex": "^\\s*({.*?)\\s*$",
       "regexFlags": "s",
-      "replacement": "```js\n$1\n```"
+      "replacement": "This is a JSON example:\n```js\n$1\n```"
     },
     {
       "tagName": "example",
-      "replacement": "```text\n$1\n```"
+      "replacement": "This is a plain text example:\n```text\n$1\n```"
     },
     {
       "tagName": "pattern",
-      "replacement": "```js\n/$1/\n```"
+      "replacement": "This is a regular expression pattern:\n```js\n/$1/\n```"
     }
   ]
 }
 ```
 Each entry in the `customTagsConfig` array specifies a tag name to look for in
 the JSDoc comments. When found, the tag's value will be replaced according to 
-the Markdown-formatted string associated with that tag.
+the Markdown-formatted `replacement` string associated with that tag.
 
 To allow for formatting variations based on the tag value, the `regex` and 
-`regexFlags` properties can be set. In this way, the configuration will only 
-match if *both* the tag name matches and the tag's value matches the `regex` 
-test.
+`regexFlags` properties can optionally be set. In this way, the configuration 
+will only match if *both* the tag name matches and the tag's value matches the 
+`regex` test.
 
 So, using the above configuration, the following JSDoc comment:
 ```js
@@ -56,16 +56,19 @@ Will result in this generated Markdown:
 
 ```markdown
     ### example
+    This is a JSON example:
     ```js
     { prop1: "a", prop2: "b" }
     ```
 
     ### example
+    This is a plain text example:
     ```text 
     -345
     ```
 
     ### pattern
+    This is a regular expression pattern:
     ```js
     /^abc123$/
     ```
